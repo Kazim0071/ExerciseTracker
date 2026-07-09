@@ -7,7 +7,7 @@ dotenv.config();
 const ConnectDb = async () => {
   try {
     await mongoose.connect(
-      "mongodb+srv://qasimameerdk:qasim@cluster0.aezdobe.mongodb.net/trackingApp?retryWrites=true&w=majority",
+      process.env.MONGO_URI,
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
